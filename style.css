@@ -113,9 +113,6 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.task > * {
-  vertical-align: middle;
-}
 
 .task > .input-text {
   margin: 0 10px;
@@ -132,12 +129,12 @@ button {
 .task > .input-text {
   width: 226px;
 }
-.button_delete img {
+.button__image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.button_delete img:hover {
+.button__image:hover {
   transform: rotateZ(0);
 }
 
