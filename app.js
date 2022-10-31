@@ -66,6 +66,10 @@ var addTask=function(){
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
+    var editInput=listItem.querySelector('.input-text');
+    var label=listItem.querySelector(".task__label");
+    editInput.classList.add("task__input-text")
+    editInput.classList.add("task__input-text_hidden")
 
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
@@ -87,7 +91,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('.input-text');
     var label=listItem.querySelector(".task__label");
     var editBtn=listItem.querySelector(".button_edit");
-    var containsClass=listItem.classList.contains("edit");
+    var containsClass=listItem.classList.contains("task_edit");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -101,7 +105,9 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("edit");
+    label.classList.toggle("task__label_hidden")
+    editInput.classList.toggle("task__input-text_hidden")
+    listItem.classList.toggle("task_edit");
 };
 
 
