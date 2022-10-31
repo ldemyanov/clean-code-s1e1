@@ -141,7 +141,7 @@ button {
 }
 
 /* Completed */
-.task-list#completed-tasks .label {
+.task-list#completed .label {
   text-decoration: line-through;
   color: #888;
 }
@@ -151,11 +151,11 @@ button {
   display: none;
 }
 
-.task-list .task-item.editMode .task-text {
+.task-list .task-item.edit .task-text {
   display: inline-block;
   width: 224px;
 }
 
-.task-list .task-item.editMode .label {
+.task-list .task-item.edit .label {
   display: none;
 }
